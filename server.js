@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/webhook', function(req, res) {
-  if (req.query['hub.verify_token'] === 'anh_hoang_dep_trai_vo_doi') {
+  if (req.query['hub.verify_token'] === 'EAADXZALqdXUYBACuQRyMTJ6ypebQa8AsniowfnRzrSN52Imrr8vuqc2ZAGEzDeAKehzlIf268jjdwZBBwzVxxjgh32YqcStRm5TLouNkz50dZBDjE61fWZBcSf0ZBHgaD6Wxppmpj0PXhx8yDJE7PB0ZClXbZC5WtIyZBCOA5osdXCowNPFNXO80UTXQFyWqTOv8ZD') {
     res.send(req.query['hub.challenge']);
   }
   res.send('Error, wrong validation token');
